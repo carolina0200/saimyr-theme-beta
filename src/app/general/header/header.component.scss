@@ -1,0 +1,17 @@
+.header-smr{
+    display: grid;
+    grid-template-columns: 18% 82%;
+    background: #ececec; //#DEAD00
+    color: #767974;
+    padding: 15px;
+    height: 13vh;
+}
+
+.logo-smr img {
+    justify-self: center;
+    max-width: 200px;
+}
+
+h1{
+    font-weight: 400;
+}

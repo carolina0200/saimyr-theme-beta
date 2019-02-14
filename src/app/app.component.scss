@@ -1,0 +1,22 @@
+.container-smr {
+    display: grid;
+    grid-template-columns: 16%;
+    grid-template-rows: 13%;
+    height: 100vh;
+    grid-template-areas: "header header"
+                            "menu content";
+}
+
+.header-container-smr {
+    grid-area: header;
+}
+
+.menu-container-smr {
+    grid-area: menu;
+    overflow: auto;
+}
+
+.content-container-smr {
+    grid-area: content;
+    overflow: auto;
+}
