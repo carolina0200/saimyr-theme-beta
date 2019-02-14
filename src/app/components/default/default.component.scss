@@ -1,0 +1,8 @@
+.container {
+    display: grid;
+    justify-content: center;
+    margin-top: 50px;
+    & img { 
+        justify-self: center;
+    }
+}

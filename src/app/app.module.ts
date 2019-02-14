@@ -14,6 +14,24 @@ import { FormsComponent } from './components/forms/forms.component';
 import { InputGroupComponent } from './components/input-group/input-group.component';
 import { NavsComponent } from './components/navs/navs.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { DefaultComponent } from './components/default/default.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const appRoutes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full'},
+  { path: 'home', component: DefaultComponent},
+  { path: 'alerts', component: AlertsComponent },
+  { path: 'badge', component: BadgeComponent },
+  { path: 'buttons', component: ButtonsComponent },
+  { path: 'button-group', component: ButtonGroupComponent },
+  { path: 'card', component: CardComponent },
+  { path: 'dropdowns', component: DropdownsComponent },
+  { path: 'forms', component: FormsComponent },
+  { path: 'input-group', component: InputGroupComponent },
+  { path: 'navs', component: NavsComponent },
+  { path: 'navbar', component: NavbarComponent },
+  { path: '**', component: DefaultComponent}
+];
 
 @NgModule({
   declarations: [
@@ -29,10 +47,12 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     FormsComponent,
     InputGroupComponent,
     NavsComponent,
-    NavbarComponent
+    NavbarComponent,
+    DefaultComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes, {useHash: true}),
   ],
   providers: [],
   bootstrap: [AppComponent]
