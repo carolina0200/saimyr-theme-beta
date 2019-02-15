@@ -1,17 +1,51 @@
-.header-smr{
-    display: grid;
-    grid-template-columns: 18% 82%;
-    background: #ececec; //#DEAD00
-    color: #767974;
-    padding: 15px;
-    height: 13vh;
+//Mixin para breakpoints
+@mixin respond-to($width) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
 }
 
-.logo-smr img {
-    justify-self: center;
+.header-smr {
+  display: grid;
+  grid-template-columns: 18% 82%;
+  background: #ececec; //#DEAD00
+  color: #767974;
+  padding: 5px;
+  height: 13vh;
+
+  @include respond-to(768px) {
+    padding: 5px;
+    grid-template-columns: 50% 50%;
+  }
+}
+
+.logo-smr {
+  display: grid;
+  align-content: center;
+
+  & img {
     max-width: 200px;
+    cursor: pointer;
+
+    @include respond-to(768px) {
+      max-width: 150px;
+    }
+
+    @include respond-to(1060px) {
+      max-width: 180px;
+    }
+  }
 }
 
-h1{
+.title-smr {
+  display: grid;
+  align-content: center;
+
+  @include respond-to(768px) {
+    justify-content: end;
+  }
+
+  & h1 {
     font-weight: 400;
+  }
 }

@@ -1,3 +1,11 @@
+
+//Mixin para breakpoints
+@mixin respond-to($width) {
+    @media only screen and (max-width: $width) {
+        @content;
+    }
+}
+
 .container-smr {
     display: grid;
     grid-template-columns: 16%;
@@ -5,6 +13,12 @@
     height: 100vh;
     grid-template-areas: "header header"
                             "menu content";
+    @include respond-to(768px){
+        grid-template-columns: 100%;
+       // grid-template-rows: 13%;
+        grid-template-areas: "header"
+                             "content";
+    }
 }
 
 .header-container-smr {
@@ -14,9 +28,14 @@
 .menu-container-smr {
     grid-area: menu;
     overflow: auto;
+
+    @include respond-to(768px){
+        display: none;
+    }
 }
 
 .content-container-smr {
     grid-area: content;
     overflow: auto;
+    
 }
