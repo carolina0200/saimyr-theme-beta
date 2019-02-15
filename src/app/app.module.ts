@@ -16,6 +16,7 @@ import { NavsComponent } from './components/navs/navs.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { DefaultComponent } from './components/default/default.component';
 import { RouterModule, Routes } from '@angular/router';
+import { ModalComponent } from './components/modal/modal.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -30,6 +31,7 @@ const appRoutes: Routes = [
   { path: 'input-group', component: InputGroupComponent },
   { path: 'navs', component: NavsComponent },
   { path: 'navbar', component: NavbarComponent },
+  { path: 'modal', component: ModalComponent },
   { path: '**', component: DefaultComponent}
 ];
 
@@ -48,7 +50,8 @@ const appRoutes: Routes = [
     InputGroupComponent,
     NavsComponent,
     NavbarComponent,
-    DefaultComponent
+    DefaultComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
