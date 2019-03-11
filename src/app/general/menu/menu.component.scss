@@ -1,5 +1,13 @@
-.sidebar {
-  transition: all;
+.sidebar-smr {
+  -ms-transform: translate(0px,0px); /* IE 9 */
+  -webkit-transform: translate(0px,0px); /* Safari */
+  transform: translate(0px,0px); /* Standard syntax */
+  -webkit-transition:1s;   /* Trancisiones */
+  -moz-transition:1s;
+  -o-transition:1s;
+  -ms-transition:1s;
+  transition: 1s;
+
   position: initial;
   height: 100%;
   background: rgb(255, 255, 255);
@@ -30,10 +38,22 @@
       border-left: 6px solid #DEAD00;
     }
 
-    @at-root &.sub {
+    @at-root &.sub-smr {
       background: #DEAD00;
       color: black;
     }
   }
+}
+
+.sidebar-hide-smr {
+  -ms-transform: translate(-200px,0px); /* IE 9 */
+  -webkit-transform: translate(-200px,0px); /* Safari */
+  transform: translate(-200px,0px); /* Standard syntax */
+  -webkit-transition:0.5s;   /* Trancisiones */
+  -moz-transition:0.5s;
+  -o-transition:0.5s;
+  -ms-transition:0.5s;
+  transition: 0.5s;
+ // display: none;
 }
 

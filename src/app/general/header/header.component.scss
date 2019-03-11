@@ -7,7 +7,7 @@
 
 .header-smr {
   display: grid;
-  grid-template-columns: 18% 82%;
+  grid-template-columns: 3% 15% 80%;
   background: #ececec; //#DEAD00
   color: #767974;
   padding: 5px;
@@ -19,20 +19,29 @@
   }
 }
 
+.menu-smr {
+  display: grid;
+  justify-content: center;
+  cursor: pointer;
+  & :hover {
+    color: darken( #767974, 10% );
+  }
+}
+
 .logo-smr {
   display: grid;
   align-content: center;
 
   & img {
-    max-width: 200px;
+    max-width: 190px;
     cursor: pointer;
 
     @include respond-to(768px) {
-      max-width: 150px;
+      max-width: 140px;
     }
 
     @include respond-to(1060px) {
-      max-width: 180px;
+      max-width: 170px;
     }
   }
 }

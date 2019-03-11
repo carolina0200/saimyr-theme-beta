@@ -8,16 +8,19 @@ import { StorageService } from './services/storage.service';
 })
 export class AppComponent implements OnInit {
   layout = 'saimyr-library';
-  constructor(private storage: StorageService) {}
+  constructor() { }
+  private _menu: boolean;
 
   ngOnInit() {
-    this.storage.setItem('layout', 'with-menu');
-    this.storage.watchStorage().subscribe(change => {
-      if (change) {
-        if (this.storage.getItem('layout') != null) {
-          this.layout = this.storage.getItem('layout');
-        }
-      }
-    });
+
   }
+
+  changeMenu(event: any) {
+    this.menu = event.menu;
+  }
+
+
+  public get menu(): boolean { return this._menu; }
+  public set menu(value: boolean) { this._menu = value; }
+
 }

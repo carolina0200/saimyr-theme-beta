@@ -1,9 +1,9 @@
 <div class="container-smr">
   <div class="header-container-smr">
-    <app-header></app-header>
+    <app-header (changeMenu) = "changeMenu($event)"></app-header>
   </div>
   <div class="menu-container-smr" >
-    <app-menu></app-menu>
+    <app-menu [menu] = "menu"></app-menu>
   </div>
   <div class="content-container-smr">
     <router-outlet></router-outlet>
