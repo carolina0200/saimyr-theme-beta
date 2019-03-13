@@ -1,41 +1,54 @@
-
 //Mixin para breakpoints
 @mixin respond-to($width) {
-    @media only screen and (max-width: $width) {
-        @content;
-    }
+  @media only screen and (max-width: $width) {
+    @content;
+  }
 }
 
 .container-smr {
-    display: grid;
-    grid-template-columns: 16%;
-    grid-template-rows: 13%;
-    height: 100vh;
-    grid-template-areas: "header header"
-                            "menu content";
-    @include respond-to(768px){
-        grid-template-columns: 100%;
-       // grid-template-rows: 13%;
-        grid-template-areas: "header"
-                             "content";
-    }
+  display: grid;
+  grid-template-columns: 16%;
+  grid-template-rows: 13%;
+  height: 100vh;
+  grid-template-areas: "header header"
+    "menu content";
+
+  @include respond-to(768px) {
+    grid-template-columns: 100%;
+    // grid-template-rows: 13%;
+    grid-template-areas: "header"
+      "content";
+  }
+}
+
+.container-smr.without-menu {
+  grid-template-columns: 100%;
+  grid-template-areas: "header"
+    "content";
+}
+
+.container-smr.with-menu {
+  @include respond-to(768px) {
+    grid-template-columns: 100%;
+    // grid-template-rows: 13%;
+    grid-template-areas: "header"
+      "menu"
+      "content";
+  }
 }
 
 .header-container-smr {
-    grid-area: header;
+  grid-area: header;
 }
 
 .menu-container-smr {
-    grid-area: menu;
-    overflow: auto;
+  grid-area: menu;
+  overflow: auto;
 
-    @include respond-to(768px){
-        display: none;
-    }
 }
 
 .content-container-smr {
-    grid-area: content;
-    overflow: auto;
-    
+  grid-area: content;
+  overflow: auto;
+
 }

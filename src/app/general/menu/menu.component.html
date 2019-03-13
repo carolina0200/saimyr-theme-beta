@@ -5,7 +5,7 @@
   </a>
   <ul>
     <li *ngFor="let item of items" (click) = "goItem(item)">
-      <a class="{{item.select ? 'select' : ''}}" routerLink="/{{item.path}}}">
+      <a class="{{item.select ? 'select' : ''}}" routerLink="/{{item.path}}">
         {{item.name}}
       </a>
     </li>

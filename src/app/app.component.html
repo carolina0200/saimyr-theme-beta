@@ -1,4 +1,4 @@
-<div class="container-smr">
+<div class="container-smr {{!menu ? 'without-menu' : 'with-menu' }}">
   <div class="header-container-smr">
     <app-header (changeMenu) = "changeMenu($event)"></app-header>
   </div>
