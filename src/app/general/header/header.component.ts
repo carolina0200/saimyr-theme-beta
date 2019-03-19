@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -9,11 +9,19 @@ export class HeaderComponent implements OnInit {
 
   private _menu: boolean;
   @Output() changeMenu = new EventEmitter();
+  @Input('change') change: boolean;
   constructor() { }
 
   ngOnInit() {
     this.menu = true;
   }
+
+  ngOnChanges(): void {
+    console.log('entro');
+    this.showMenu();
+  }
+
+
 
   showMenu() {
     this.menu = !this.menu;

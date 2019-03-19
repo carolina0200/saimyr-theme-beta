@@ -1,6 +1,4 @@
 .sidebar-smr {
-
-
   position: initial;
   height: 100%;
   background: rgb(255, 255, 255);
@@ -36,15 +34,7 @@
       color: black;
     }
   }
-  -webkit-transition: all 1s linear;
-  -moz-transition: all 1s linear;
-  -o-transition: all 1s linear;
-  transition: all 1s linear;
-  //transform: translateX(0%);
+
 }
 
-.sidebar-smr.sidebar-hide-smr {
-  transform: translateX(-100%);
- 
-}
 
