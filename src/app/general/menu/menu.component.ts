@@ -20,6 +20,7 @@ export class MenuComponent implements OnInit {
       { name: 'Button group', path: 'button-group', select: false },
       { name: 'Card', path: 'card', select: false },
       { name: 'Carousel', path: 'carousel', select: false },
+      { name: 'Code', path: 'code', select: false },
       { name: 'Collapse', path: 'collapse', select: false },
       { name: 'Dropdowns', path: 'dropdowns', select: false },
       { name: 'Forms', path: 'forms', select: false },

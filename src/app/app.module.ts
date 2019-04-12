@@ -17,6 +17,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { DefaultComponent } from './components/default/default.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ModalComponent } from './components/modal/modal.component';
+import { CodeComponent } from './components/code/code.component';
+import { SmrLibModule } from 'smr-lib';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -32,6 +34,7 @@ const appRoutes: Routes = [
   { path: 'navs', component: NavsComponent },
   { path: 'navbar', component: NavbarComponent },
   { path: 'modal', component: ModalComponent },
+  { path: 'code', component: CodeComponent },
   { path: '**', component: DefaultComponent}
 ];
 
@@ -51,11 +54,13 @@ const appRoutes: Routes = [
     NavsComponent,
     NavbarComponent,
     DefaultComponent,
-    ModalComponent
+    ModalComponent,
+    CodeComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes, {useHash: true}),
+    SmrLibModule
   ],
   providers: [],
   bootstrap: [AppComponent]

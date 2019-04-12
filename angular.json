@@ -28,7 +28,7 @@
             ],
             "styles": [
               "src/styles.scss",
-              "src/saimyr-theme/sass/saimyr.scss",
+              "node_modules/smr-lib/sass/saimyr.scss",
               "node_modules/font-awesome/css/font-awesome.min.css"
             ],
             "scripts": [

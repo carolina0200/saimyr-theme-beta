@@ -4,7 +4,8 @@
     <app-header [change] = "changeIcon" (changeMenu) = "changeMenu($event)"></app-header>
   </div>
   <div class="menu-container-smr" >
-    <app-menu (selectItem) = "selectItem($event)"></app-menu>
+    <!--<app-menu (selectItem) = "selectItem($event)"></app-menu>-->
+    <enl-menu></enl-menu>
   </div>
   <div class="content-container-smr">
     <router-outlet></router-outlet>
